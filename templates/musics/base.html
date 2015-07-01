@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 {% load djangular_tags %}
-<html ng-app="Jaeeo">
+<html ng-clock ng-app="Jaeeo">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,13 +27,9 @@
         </ul>
     </div>
 </div>
-<div id="container">
-    <div class="wrapper">
-    {% block content %}
+{% block content %}
 
-    {% endblock %}
-    </div>
-</div>
+{% endblock %}
 <div id="footer">
     <div class="wrapper">
         <address>Copyright © 2015 <a class="active" href="http://jaeeo.kr/" title="Jaeeo.kr">Jaeeo.kr</a>  by Jin-chul Park. All rights reserved.</address>

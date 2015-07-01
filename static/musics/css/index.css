@@ -1,0 +1,60 @@
+#container .wrapper{
+    margin : 30px auto;
+}
+.search{
+    position : relative;
+    height : 30px;
+}
+
+.search label{
+    position : absolute;
+    top : 6px;
+    left : 10px;
+    z-index: 2;
+}
+
+.search input{
+    padding-left : 30px;
+    position : absolute;
+    border : 1px solid #333333;
+}
+
+.video-wrapper{
+    margin : 30px auto;
+}
+
+.alert.bg-info {
+    margin-bottom : 20px;
+    padding : 10px 20px;
+    line-height : 25px;
+}
+
+#curr_video{
+    display : inline-block;
+    float : left;
+}
+
+.videos{
+    float : right;
+    width : 280px;
+    height : 360px;
+    overflow: scroll;
+}
+
+.others-header{
+    margin-bottom : 10px;
+}
+
+.other{
+    float : left;
+    width : 20%;
+    height : 200px;
+}
+
+.video{
+    cursor : pointer;
+}
+
+.video-options{
+    text-align : right;
+}

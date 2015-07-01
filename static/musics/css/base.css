@@ -1,3 +1,7 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 h1{
     margin : 0;
 }
@@ -36,4 +40,18 @@ h1{
 }
 .nav li + li{
     margin-left : 10px;
+}
+
+.clear:before, .clear:after {
+    content:" ";
+    display:table;
+    clear:both;
+}
+
+td i{
+    cursor : pointer;
+}
+
+td i + i{
+    margin-left : 5px;
 }
