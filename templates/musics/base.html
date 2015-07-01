@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load djangular_tags %}
+<html ng-app="Jaeeo">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Jaeeo{% endblock %}</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'djangular/css/bootstrap3.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'djangular/css/styles.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'musics/css/base.css' %}" />
+    {% block link %}{% endblock %}
+</head>
+<body>
+<div id="header">
+    <div class="wrapper">
+        <div id="logo">
+            <h1>Jaeeo</h1>
+        </div>
+        <ul class="nav">
+            <li>music</li>
+            <li>test</li>
+        </ul>
+    </div>
+</div>
+<div id="container">
+    <div class="wrapper">
+    {% block content %}
+
+    {% endblock %}
+    </div>
+</div>
+<div id="footer">
+    <div class="wrapper">
+        <address>Copyright © 2015 <a class="active" href="http://jaeeo.kr/" title="Jaeeo.kr">Jaeeo.kr</a>  by Jin-chul Park. All rights reserved.</address>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.js" type="text/javascript"></script>
+<script src="{% static 'djangular/js/django-angular.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'admin/js/jquery.js' %}" type="text/javascript"></script>
+<script src="{% static 'musics/js/base.js' %}" type="text/javascript"></script>
+{% block script %}{% endblock %}
+</body>
+</html>

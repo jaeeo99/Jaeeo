@@ -1,0 +1,39 @@
+h1{
+    margin : 0;
+}
+
+.wrapper{
+    margin : 0 auto;
+    width : 940px;
+    height : 100%;
+}
+
+#header{
+    width : 100%;
+    height : 50px;
+    color : #ffffff;
+    background-color : #333333;
+}
+
+#header #logo {
+    float : left;
+    height : 100%;
+}
+
+#header #logo h1{
+    line-height : 50px;
+}
+
+#header .nav {
+    display : inline-block;
+    float : right;
+}
+
+.nav li{
+    float : left;
+    line-height : 50px;
+    padding : 0 10px;
+}
+.nav li + li{
+    margin-left : 10px;
+}
