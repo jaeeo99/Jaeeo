@@ -29,13 +29,13 @@ my_app.directive('search', function($window){
 
 var SEARCH_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&key=" + GOOGLE_API_KEY + "&q=";
 
-my_app.controller('MusicController', function($scope, $window, $http, $cookieStore){
+my_app.controller('MusicController', function($scope, $window, $http, $cookies){
 
     var initVideos = function(videos){
-        var video_length = $cookieStore.get('video_length');
+        var video_length = $cookies.get('video_length');
         if (video_length != null && parseInt(video_length) > 0){
             for(i = 0 ; i < video_length ; i++){
-                var video = JSON.parse($cookieStore.get('video-' + i));
+                var video = JSON.parse($cookies.getObject('video-' + i));
                 videos.push(video);
             }
         }
@@ -46,6 +46,7 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookieSto
     $scope.videos = [];
     $scope.video_index = 0;
     initVideos($scope.videos);
+
 
     // def angular function
     $scope.search = function(query) {
@@ -110,12 +111,11 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookieSto
     // save playlist on cookies
     $scope.$watch('videos', function(){
         angular.forEach($cookies, function (v, k) {
-            $cookieStore.remove(k);
+            $cookies.remove(k);
         });
-
-        $cookieStore.put('video_length', $scope.videos.length);
+        $cookies.put('video_length', $scope.videos.length);
         angular.forEach($scope.videos, function(i, val){
-            $cookieStore.put('video-' + i, JSON.stringify(val));
+            $cookies.putObject('video-' + i, val);
         });
     }, true);
 
@@ -127,15 +127,17 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookieSto
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    var changeVideo = function() {
-        angular.forEach($scope.videos, function(i, val){
-            val.playing = false;
-        });
-        player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
-        $scope.videos[$scope.video_index].playing = true;
-    }
+    var changeVideo = function() {}
 
     $window.onYouTubeIframeAPIReady = function(){
+        changeVideo = function() {
+            jQuery.each($scope.videos, function(i, val){
+                val.playing = false;
+            });
+            player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
+            $scope.videos[$scope.video_index].playing = true;
+        }
+
         player = new YT.Player('curr_video', {
             events: {
                 'onReady': onPlayerReady,

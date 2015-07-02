@@ -73,7 +73,7 @@
       <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="0" selection-start="3938" selection-end="3938" vertical-scroll-proportion="0.09287257" vertical-offset="1624" max-vertical-offset="2775">
+            <state line="43" column="12" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.09287257" vertical-offset="559" max-vertical-offset="2805">
               <folding />
             </state>
           </provider>
@@ -679,30 +679,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/musics/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="15" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musics/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="8" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="120" selection-start="2181" selection-end="2181" vertical-scroll-proportion="-23.75" vertical-offset="0" max-vertical-offset="930">
           <folding />
         </state>
       </provider>
@@ -721,9 +700,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="120" selection-start="2181" selection-end="2181" vertical-scroll-proportion="-23.75" vertical-offset="0" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/musics/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="15" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musics/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="19" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="0" selection-start="3938" selection-end="3938" vertical-scroll-proportion="0.09287257" vertical-offset="1624" max-vertical-offset="2775">
+        <state line="43" column="12" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.09287257" vertical-offset="559" max-vertical-offset="2805">
           <folding />
         </state>
       </provider>
