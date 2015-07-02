@@ -13,48 +13,44 @@
 {% block content %}
     <div id="container" ng-controller="MusicController">
         <div class="wrapper">
-            <div class="alert bg-info">추가할 노래를 검색해 주세요. (가수 이름 + 노래 제목의 형식을 추천)<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+            <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                추가할 노래를 검색해 주세요. (가수 이름 + 노래 제목의 형식을 추천)
+            </div>
             <div class="search">
-                <label for="query"><i class="fa fa-search"></i></label>
-                <input id="query" type="search" class="form-control query" ng-model="query"/>
+                <label for="jaeeo_query"><i class="fa fa-search"></i></label>
+                <input id="jaeeo_query" type="search" search callback="search(query)" class="form-control query" ng-model="query"/>
             </div>
             <div class="video-wrapper clear">
                 <div id="curr_video"></div>
                 <div class="videos">
                     <table class="table table-striped">
                         <tbody>
-                        <tr ng-repeat="video in videos">
-                            <td class="video" ng-click="changeVideo(video, true)">{$ video.query $}</td>
-                            <td class="video-options">
-                                <i class="fa fa-edit" aria-hidden="true"></i>
-                                <i class="fa fa-times" aria-hidden="true"></i>
+                        <tr ng-repeat="video in videos track by $index" ng-class="{'playing' : video.playing}">
+                            <td class="video" ng-click="changeVideo(video, true)" ng-if="!video.edit">{$ video.title $}</td>
+                            <td class="video-options" ng-if="!video.edit">
+                                <i class="fa fa-edit" aria-hidden="true" ng-click="video.edit = true"></i>
+                                <i class="fa fa-times" aria-hidden="true" ng-click="removeVideo($index)"></i>
+                            </td>
+                            <td class="video" ng-if="video.edit">
+                                <input type="search" search callback="modifyVideo(video, query)" class="form-control query" ng-model="video.query"/>
+                            </td>
+                            <td class="video-options" ng-if="video.edit">
+                                <button type="button" class="btn btn-success btn-xs" ng-click="modifyVideo(video, video.query)">확인</button>
+                                <button type="button" class="btn btn-default btn-xs" ng-click="video.edit = false">취소</button>
                             </td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="others alert bg-success clear">
+            <div class="others alert alert-success clear" ng-if="videos[video_index].other_videos.length != 0">
                 <div class="others-header">
-                    유사한 곡 <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    같이 들을만한 곡
                 </div>
-
-                <div class="other">
-                    hi
+                <div class="other" ng-repeat="other in videos[video_index].other_videos" ng-click="addOtherVideo(videos[video_index].other_videos, $index)">
+                    {$ other.title $}
                 </div>
-                <div class="other">
-                    hi
-                </div>
-                <div class="other">
-                    hi
-                </div>
-                <div class="other">
-                    hi
-                </div>
-                <div class="other">
-                    hi
-                </div>
-
             </div>
         </div>
     </div>

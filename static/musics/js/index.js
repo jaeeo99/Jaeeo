@@ -2,34 +2,123 @@
  * Created by Jaeeo on 15. 7. 1..
  */
 
-my_app.controller('MusicController', function($scope, $window){
-    $scope.query = null;
-    $scope.videos = [{
-        query : "언제쯤이면",
-        title : "[MV] YOON HYUN SANG(윤현상) _ When would it be(언제쯤이면) (Duet. IU(아이유))",
-        videoId : "o6HFiVaK15I",
-        thumb : "//i.ytimg.com/vi_webp/o6HFiVaK15I/mqdefault.webp",
-        played : 0,
-        skipped : 0,
-        accepted : false,
-        edit : false,
-        other_videos : []
-    },{
-        query : "그애 참 싫다",
-        title : "IU - 그 애 참 싫다 (Really Hate Her) FarLawmix (Feat. ModernT, uMNew, IU) KPOP Remix FarLaw",
-        videoId : "vP4hx43Z5os",
-        thumb : "//i.ytimg.com/vi/vP4hx43Z5os/mqdefault.jpg",
-        played : 0,
-        skipped : 0,
-        accepted : false,
-        edit : false,
-        other_videos : []
-    }];
-    $scope.curr_video = $scope.videos[0];
-    $scope.others = [];
+// search field link to search function
+my_app.directive('search', function($window){
+    return {
+        restrict: 'A',
+        scope: {
+            ngModel: "=",
+            search: "&callback"
+        },
+        link: function(scope, elem, attrs){
+            elem.bind('keydown', function(e){
+                if (e.keyCode == 13){
+                    if(isNull(scope.ngModel)){
+                        $window.alert("검색어를 입력해 주세요.");
+                    }
+                    else{
+                        scope.search({query : scope.ngModel});
+                        scope.ngModel = null;
+                    }
+                }
+            });
+        }
+    }
+});
 
+
+var SEARCH_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&key=" + GOOGLE_API_KEY + "&q=";
+
+my_app.controller('MusicController', function($scope, $window, $http, $cookieStore){
+
+    $cookieStore.put('video_length', 0);
+
+    var initVideos = function(videos){
+        var video_length = $cookieStore.get('video_length');
+        if (video_length != null && parseInt(video_length) > 0){
+            for(i = 0 ; i < video_length ; i++){
+                var video = JSON.parse($cookieStore.get('video-' + i));
+                videos.push(video);
+            }
+        }
+    }
+
+    // init angular datas
+    $scope.query = null;
+    $scope.videos = [];
+    $scope.video_index = 0;
+    initVideos($scope.videos);
+
+    // def angular function
+    $scope.search = function(query) {
+        $http.get(SEARCH_URL + query).
+            success(function(data, status, headers, config) {
+                var video = {
+                    title : data.items[0].snippet.title,
+                    videoId : data.items[0].id.videoId,
+                    thumb : data.items[0].snippet.thumbnails.default.url,
+                    edit : false,
+                    playing : false,
+                    other_videos : []
+                }
+                for (i = 1; i < data.items.length; i++) {
+                    video.other_videos.push({
+                        title : data.items[i].snippet.title,
+                        videoId : data.items[i].id.videoId,
+                        thumb : data.items[i].snippet.thumbnails.default.url
+                    });
+                }
+                $scope.videos.push(video);
+            }).
+            error(function(data, status, headers, config) {
+                $window.alert('동영상 등록에 실패하였습니다.');
+            });
+    }
+
+    $scope.modifyVideo = function(video, query){
+        $http.get(SEARCH_URL + query).
+            success(function(data, status, headers, config) {
+                video.title = data.items[0].snippet.title;
+                video.videoId = data.items[0].id.videoId;
+                video.thumb = data.items[0].snippet.thumbnails.default.url;
+                video.edit = false;
+                video.playing = false;
+                video.other_videos = [];
+                for (i = 1; i < data.items.length; i++) {
+                    video.other_videos.push({
+                        title : data.items[i].snippet.title,
+                        videoId : data.items[i].id.videoId,
+                        thumb : data.items[i].snippet.thumbnails.default.url
+                    });
+                }
+            }).
+            error(function(data, status, headers, config) {
+                $window.alert('동영상 등록에 실패하였습니다.');
+            });
+    }
+
+    $scope.addOtherVideo = function(others, index){
+        var addVideo = cloneObject(others[index]);
+        addVideo.edit = false;
+        addVideo.playing = false;
+        addVideo.other_videos = cloneObject(others);
+        $scope.videos.push(addVideo);
+    }
+
+    $scope.removeVideo = function(index){
+        $scope.videos.splice(index,1);
+    }
+
+    // save playlist on cookies
+    $scope.$watch('videos', function(){
+        $cookieStore.put('video_length', $scope.videos.length);
+        jQuery.each($scope.videos, function(i, val){
+            $cookieStore.put('video-' + i, JSON.stringify(val));
+        });
+    }, true);
+
+    // codes for youtube player
     var player;
-    var video_index = 0;
     var tag = document.createElement('script');
 
     tag.src = "https://www.youtube.com/iframe_api";
@@ -37,19 +126,15 @@ my_app.controller('MusicController', function($scope, $window){
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
     var changeVideo = function() {
-        $scope.curr_video = $scope.videos[video_index];
-        player.loadVideoById($scope.curr_video.videoId, 0 , 'large');
-    }
-
-    $scope.changeVideo = function(video, forced) {
-        index = $scope.videos.indexOf(video);
-        video_index = index;
-        changeVideo();
+        jQuery.each($scope.videos, function(i, val){
+            val.playing = false;
+        });
+        player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
+        $scope.videos[$scope.video_index].playing = true;
     }
 
     $window.onYouTubeIframeAPIReady = function(){
         player = new YT.Player('curr_video', {
-            videoId: $scope.curr_video.videoId,
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -57,7 +142,16 @@ my_app.controller('MusicController', function($scope, $window){
         });
     }
 
+    $scope.changeVideo = function(video, forced) {
+        index = $scope.videos.indexOf(video);
+        $scope.video_index = index;
+        changeVideo();
+    }
+
     $window.onPlayerReady = function(event) {
+        if($scope.videos.length != 0){
+            changeVideo();
+        }
         event.target.playVideo();
     }
 
@@ -66,11 +160,11 @@ my_app.controller('MusicController', function($scope, $window){
 
         }
         else if(event.data == YT.PlayerState.ENDED){
-            if ($scope.videos.length > video_index + 1){
-                video_index++;
+            if ($scope.videos.length > $scope.video_index + 1){
+                $scope.video_index++;
             }
             else{
-                video_index = 0;
+                $scope.video_index = 0;
             }
             changeVideo();
         }
@@ -79,4 +173,5 @@ my_app.controller('MusicController', function($scope, $window){
     $window.stopVideo = function() {
         player.stopVideo();
     }
+
 });
