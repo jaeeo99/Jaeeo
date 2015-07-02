@@ -31,8 +31,6 @@ var SEARCH_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&type
 
 my_app.controller('MusicController', function($scope, $window, $http, $cookieStore){
 
-    $cookieStore.put('video_length', 0);
-
     var initVideos = function(videos){
         var video_length = $cookieStore.get('video_length');
         if (video_length != null && parseInt(video_length) > 0){

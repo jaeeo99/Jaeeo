@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591268a-97ca-4558-8c91-15f52775b39c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/musics/base.html" afterPath="$PROJECT_DIR$/templates/musics/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/musics/js/base.js" afterPath="$PROJECT_DIR$/static/musics/js/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/musics/css/index.css" afterPath="$PROJECT_DIR$/static/musics/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/musics/index.html" afterPath="$PROJECT_DIR$/templates/musics/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/musics/js/index.js" afterPath="$PROJECT_DIR$/static/musics/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Jaeeo/settings.py" afterPath="$PROJECT_DIR$/Jaeeo/settings.py" />
     </list>
     <ignored path="Jaeeo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,13 +71,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="55" selection-start="481" selection-end="481" vertical-scroll-proportion="-1.7051836" vertical-offset="1789" max-vertical-offset="2715">
+            <state line="32" column="0" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="2685">
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Jaeeo/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="44" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.22678186" vertical-offset="675" max-vertical-offset="1755">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,12 +125,12 @@
         <option value="$PROJECT_DIR$/static/musics/js/layout.js" />
         <option value="$PROJECT_DIR$/templates/musics/layout.html" />
         <option value="$PROJECT_DIR$/static/musics/css/base.css" />
-        <option value="$PROJECT_DIR$/Jaeeo/settings.py" />
         <option value="$PROJECT_DIR$/templates/musics/base.html" />
         <option value="$PROJECT_DIR$/static/musics/css/index.css" />
         <option value="$PROJECT_DIR$/templates/musics/index.html" />
         <option value="$PROJECT_DIR$/static/musics/js/base.js" />
         <option value="$PROJECT_DIR$/static/musics/js/index.js" />
+        <option value="$PROJECT_DIR$/Jaeeo/settings.py" />
       </list>
     </option>
   </component>
@@ -674,11 +679,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="926" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jaeeo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="16" selection-start="1080" selection-end="1080" vertical-scroll-proportion="-0.9117647" vertical-offset="1143" max-vertical-offset="1755" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/musics/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="51" selection-start="1592" selection-end="1592" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="780">
@@ -723,10 +723,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="55" selection-start="481" selection-end="481" vertical-scroll-proportion="-1.7051836" vertical-offset="1789" max-vertical-offset="2715">
+        <state line="32" column="0" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="2685">
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jaeeo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="44" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.22678186" vertical-offset="675" max-vertical-offset="1755">
+          <folding />
         </state>
       </provider>
     </entry>
