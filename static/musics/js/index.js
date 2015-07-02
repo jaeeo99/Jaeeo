@@ -109,8 +109,12 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookieSto
 
     // save playlist on cookies
     $scope.$watch('videos', function(){
+        angular.forEach($cookies, function (v, k) {
+            $cookieStore.remove(k);
+        });
+
         $cookieStore.put('video_length', $scope.videos.length);
-        jQuery.each($scope.videos, function(i, val){
+        angular.forEach($scope.videos, function(i, val){
             $cookieStore.put('video-' + i, JSON.stringify(val));
         });
     }, true);
@@ -124,7 +128,7 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookieSto
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
     var changeVideo = function() {
-        jQuery.each($scope.videos, function(i, val){
+        angular.forEach($scope.videos, function(i, val){
             val.playing = false;
         });
         player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
