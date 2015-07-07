@@ -35,7 +35,7 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
         var video_length = $cookies.get('video_length');
         if (video_length != null && parseInt(video_length) > 0){
             for(i = 0 ; i < video_length ; i++){
-                var video = JSON.parse($cookies.getObject('video-' + i));
+                var video = JSON.parse($cookies.get('video-' + i));
                 videos.push(video);
             }
         }
@@ -114,8 +114,8 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
             $cookies.remove(k);
         });
         $cookies.put('video_length', $scope.videos.length);
-        angular.forEach($scope.videos, function(i, val){
-            $cookies.putObject('video-' + i, val);
+        jQuery.each($scope.videos, function(i, val){
+            $cookies.put('video-' + i, JSON.stringify(val));
         });
     }, true);
 
