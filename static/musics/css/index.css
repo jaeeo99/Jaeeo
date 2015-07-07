@@ -55,6 +55,18 @@
     height : 20px;
 }
 
+.play-controller{
+    margin-bottom : 5px;
+}
+
+.play-control{
+    float : left;
+}
+
+.list-control{
+    float : right;
+}
+
 .playing td{
     background-color : #fcf8e3 !important;
 }

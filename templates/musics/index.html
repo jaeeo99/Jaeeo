@@ -22,6 +22,28 @@
                 <input id="jaeeo_query" type="search" search callback="search(query)" class="form-control query" ng-model="query"/>
             </div>
             <div class="video-wrapper clear">
+                <div class="play-controller clearfix">
+                    <div class="play-control">
+                        <button type="button" class="btn btn-default btn-xs" tooltip-placement="top" tooltip="이전 곡" ng-click="changeVideoByController(-1)">
+                            <i class="fa fa-backward"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-xs" tooltip-placement="top" tooltip="일시 정지" ng-click="toggleVideo()">
+                            <i class="fa" ng-class="{'fa-pause' : videos[video_index].playing, 'fa-play' : !videos[video_index].playing}"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-xs" tooltip-placement="top" tooltip="다음 곡" ng-click="changeVideoByController(1)">
+                            <i class="fa fa-forward"></i>
+                        </button>
+                        {$ videos[video_index].title $}
+                    </div>
+                    <div class="list-control">
+                        <button type="button" class="btn btn-default btn-xs" tooltip-placement="top" tooltip="셔플" ng-click="shuffleVideos(video_index)">
+                            <i class="fa fa-random"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-xs" ng-click="openWithYoutube(videos[video_index].videoId)">
+                            <i class="fa fa-youtube-play"></i> youtube에서 보기
+                        </button>
+                    </div>
+                </div>
                 <div id="curr_video"></div>
                 <div class="videos">
                     <table class="table table-striped">
@@ -29,8 +51,8 @@
                         <tr ng-repeat="video in videos track by $index" ng-class="{'playing' : video.playing}">
                             <td class="video" ng-click="changeVideo(video, true)" ng-if="!video.edit">{$ video.title $}</td>
                             <td class="video-options" ng-if="!video.edit">
-                                <i class="fa fa-edit" aria-hidden="true" ng-click="video.edit = true"></i>
-                                <i class="fa fa-times" aria-hidden="true" ng-click="removeVideo($index)"></i>
+                                <i class="fa fa-edit" ng-click="video.edit = true" tooltip-placement="top" tooltip="수정"></i>
+                                <i class="fa fa-times" ng-click="removeVideo($index)" tooltip-placement="top" tooltip="삭제"></i>
                             </td>
                             <td class="video" ng-if="video.edit">
                                 <input type="search" search callback="modifyVideo(video, query)" class="form-control query" ng-model="video.query"/>

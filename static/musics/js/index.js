@@ -96,6 +96,17 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
             });
     }
 
+    $scope.toggleVideo = function(){
+        if(player.getPlayerState() == 1){
+            player.pauseVideo();
+            $scope.videos[$scope.video_index].playing = false;
+        }
+        else{
+            player.playVideo();
+            $scope.videos[$scope.video_index].playing = true;
+        }
+    }
+
     $scope.addOtherVideo = function(others, index){
         var addVideo = cloneObject(others[index]);
         addVideo.edit = false;
@@ -106,6 +117,17 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
 
     $scope.removeVideo = function(index){
         $scope.videos.splice(index,1);
+    }
+
+    $scope.shuffleVideos = function(index){
+        var video = $scope.videos[index];
+        $scope.videos = shuffle($scope.videos);
+        $scope.video_index = $scope.videos.indexOf(video);
+    }
+
+    $scope.openWithYoutube = function(videoId){
+        var url = "https://www.youtube.com/watch?v="
+        $window.open(url + videoId);
     }
 
     // save playlist on cookies
@@ -144,6 +166,27 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
                 'onStateChange': onPlayerStateChange
             }
         });
+    }
+
+    $scope.changeVideoByController = function(position){
+        if(position > 0){
+            if ($scope.video_index + position < $scope.videos.length){
+                $scope.video_index += position;
+            }
+            else{
+                $scope.video_index = 0;
+            }
+        }
+        else if (position < 0){
+            if ($scope.video_index + position >= 0){
+                $scope.video_index += position;
+            }
+            else{
+                $scope.video_index = $scope.videos.length - 1;
+            }
+            console.log($scope.video_index);
+        }
+        changeVideo();
     }
 
     $scope.changeVideo = function(video, forced) {
