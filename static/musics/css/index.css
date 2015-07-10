@@ -74,3 +74,27 @@
 .video-options{
     text-align : right;
 }
+
+@media screen and (max-width: 940px){
+    .list-control{
+        display : none;
+    }
+    #container .wrapper{
+        margin : 15px auto;
+    }
+    .alert span.addition{
+        display : none;
+    }
+    .video-wrapper{
+        margin : 20px auto;
+    }
+    .videos{
+        height : auto;
+        overflow : none;
+    }
+    #curr_video{
+        width : 100%;
+        height : 200px;
+        display : block;
+    }
+}
