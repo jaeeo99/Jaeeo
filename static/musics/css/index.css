@@ -76,7 +76,7 @@
 }
 
 @media screen and (max-width: 940px){
-    .list-control{
+    .play-controller{
         display : none;
     }
     #container .wrapper{

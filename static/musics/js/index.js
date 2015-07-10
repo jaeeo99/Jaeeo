@@ -131,6 +131,11 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
         $window.open(url + videoId);
     }
 
+    $scope.changeVideo = function(video, forced) {
+        var index = $scope.videos.indexOf(video);
+        $scope.video_index = index;
+    }
+
     // save playlist on cookies
     $scope.$watch('videos', function(){
         angular.forEach($cookies, function (v, k) {
@@ -140,6 +145,9 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
         jQuery.each($scope.videos, function(i, val){
             $cookies.put('video-' + i, JSON.stringify(val));
         });
+        if($scope.videos.length > 0 && $scope.video_index == -1){
+            $scope.video_index = 0;
+        }
     }, true);
 
     // codes for youtube player
@@ -152,9 +160,6 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
 
     $window.onYouTubeIframeAPIReady = function(){
         player = new YT.Player('curr_video', {
-            playerVars: {
-                'autoplay': 1
-            },
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -163,42 +168,21 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
 
         // for change Videos
         $scope.$watch('video_index', function(){
-            jQuery.each($scope.videos, function(i, val){
-                val.playing = false;
-            });
-            player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
-            $scope.videos[$scope.video_index].playing = true;
+            if($scope.videos.length > 0){
+                jQuery.each($scope.videos, function(i, val){
+                    val.playing = false;
+                });
+                player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
+                $scope.videos[$scope.video_index].playing = true;
+            }
         });
-    }
-
-    $scope.changeVideoByController = function(position){
-        if(position > 0){
-            if ($scope.video_index + position < $scope.videos.length){
-                $scope.video_index += position;
-            }
-            else{
-                $scope.video_index = 0;
-            }
-        }
-        else if(position < 0){
-            if ($scope.video_index + position >= 0){
-                $scope.video_index += position;
-            }
-            else{
-                $scope.video_index = $scope.videos.length - 1;
-            }
-            console.log($scope.video_index);
-        }
-    }
-
-    $scope.changeVideo = function(video, forced) {
-        var index = $scope.videos.indexOf(video);
-        $scope.video_index = index;
     }
 
     $window.onPlayerReady = function(event) {
         $scope.$apply(function(){
-            $scope.video_index = 0;
+            if($scope.videos.length > 0){
+                $scope.video_index = 0;
+            }
         });
     }
 
