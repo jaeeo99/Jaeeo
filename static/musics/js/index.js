@@ -12,7 +12,7 @@ my_app.directive('search', function($window){
         },
         link: function(scope, elem, attrs){
             elem.bind('keydown', function(e){
-                if (e.keyCode == 13){
+                if(e.keyCode == 13){
                     if(isNull(scope.ngModel)){
                         $window.alert("검색어를 입력해 주세요.");
                     }
@@ -31,9 +31,10 @@ var SEARCH_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&type
 
 my_app.controller('MusicController', function($scope, $window, $http, $cookies){
 
+    // init videos from $cookies
     var initVideos = function(videos){
         var video_length = $cookies.get('video_length');
-        if (video_length != null && parseInt(video_length) > 0){
+        if(video_length != null && parseInt(video_length) > 0){
             for(i = 0 ; i < video_length ; i++){
                 var video = JSON.parse($cookies.get('video-' + i));
                 videos.push(video);
@@ -44,11 +45,11 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
     // init angular datas
     $scope.query = null;
     $scope.videos = [];
-    $scope.video_index = 0;
+    $scope.video_index = -1;
     initVideos($scope.videos);
 
 
-    // def angular function
+    // def angular function for html attr
     $scope.search = function(query) {
         $http.get(SEARCH_URL + query).
             success(function(data, status, headers, config) {
@@ -149,22 +150,24 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    var changeVideo = function() {}
-
     $window.onYouTubeIframeAPIReady = function(){
-        changeVideo = function() {
+        player = new YT.Player('curr_video', {
+            playerVars: {
+                'autoplay': 1
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+
+        // for change Videos
+        $scope.$watch('video_index', function(){
             jQuery.each($scope.videos, function(i, val){
                 val.playing = false;
             });
             player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
             $scope.videos[$scope.video_index].playing = true;
-        }
-
-        player = new YT.Player('curr_video', {
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
         });
     }
 
@@ -177,7 +180,7 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
                 $scope.video_index = 0;
             }
         }
-        else if (position < 0){
+        else if(position < 0){
             if ($scope.video_index + position >= 0){
                 $scope.video_index += position;
             }
@@ -186,35 +189,33 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
             }
             console.log($scope.video_index);
         }
-        changeVideo();
     }
 
     $scope.changeVideo = function(video, forced) {
-        index = $scope.videos.indexOf(video);
+        var index = $scope.videos.indexOf(video);
         $scope.video_index = index;
-        changeVideo();
     }
 
     $window.onPlayerReady = function(event) {
-        if($scope.videos.length != 0){
-            changeVideo();
-        }
-        event.target.playVideo();
+        $scope.$apply(function(){
+            $scope.video_index = 0;
+        });
     }
 
     $window.onPlayerStateChange = function(event) {
-        if (event.data == YT.PlayerState.PLAYING) {
+        $scope.$apply(function(){
+            if(event.data == YT.PlayerState.PLAYING) {
 
-        }
-        else if(event.data == YT.PlayerState.ENDED){
-            if ($scope.videos.length > $scope.video_index + 1){
-                $scope.video_index++;
             }
-            else{
-                $scope.video_index = 0;
+            else if(event.data == YT.PlayerState.ENDED){
+                if ($scope.videos.length > $scope.video_index + 1){
+                    $scope.video_index++;
+                }
+                else{
+                    $scope.video_index = 0;
+                }
             }
-            changeVideo();
-        }
+        });
     }
 
     $window.stopVideo = function() {

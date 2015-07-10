@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591268a-97ca-4558-8c91-15f52775b39c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/musics/css/base.css" afterPath="$PROJECT_DIR$/static/musics/css/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/musics/css/index.css" afterPath="$PROJECT_DIR$/static/musics/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/musics/index.html" afterPath="$PROJECT_DIR$/templates/musics/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/musics/js/index.js" afterPath="$PROJECT_DIR$/static/musics/js/index.js" />
     </list>
     <ignored path="Jaeeo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,16 +55,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="85" selection-start="1472" selection-end="1472" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="1260">
+            <state line="29" column="85" selection-start="1472" selection-end="1472" vertical-scroll-proportion="-6.875" vertical-offset="270" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="34" selection-start="4400" selection-end="4400" vertical-scroll-proportion="0.0" vertical-offset="1189" max-vertical-offset="3450">
+            <state line="146" column="18" selection-start="4891" selection-end="4891" vertical-scroll-proportion="-0.34449244" vertical-offset="2509" max-vertical-offset="3465">
               <folding />
             </state>
           </provider>
@@ -100,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/musics/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="24" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.8866091" vertical-offset="634" max-vertical-offset="1575">
+            <state line="97" column="24" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1575">
               <folding />
             </state>
           </provider>
@@ -140,10 +137,10 @@
         <option value="$PROJECT_DIR$/Jaeeo/urls.py" />
         <option value="$PROJECT_DIR$/templates/musics/base.html" />
         <option value="$PROJECT_DIR$/static/musics/js/base.js" />
-        <option value="$PROJECT_DIR$/static/musics/js/index.js" />
         <option value="$PROJECT_DIR$/static/musics/css/base.css" />
         <option value="$PROJECT_DIR$/templates/musics/index.html" />
         <option value="$PROJECT_DIR$/static/musics/css/index.css" />
+        <option value="$PROJECT_DIR$/static/musics/js/index.js" />
       </list>
     </option>
   </component>
@@ -926,13 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="34" selection-start="4400" selection-end="4400" vertical-scroll-proportion="0.0" vertical-offset="1189" max-vertical-offset="3450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jaeeo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="22" selection-start="1275" selection-end="1275" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="660">
@@ -947,16 +937,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
+    <entry file="file://$PROJECT_DIR$/static/musics/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="85" selection-start="1472" selection-end="1472" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="1260">
+        <state line="97" column="24" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1575">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/musics/css/index.css">
+    <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="24" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.8866091" vertical-offset="634" max-vertical-offset="1575">
+        <state line="29" column="85" selection-start="1472" selection-end="1472" vertical-scroll-proportion="-6.875" vertical-offset="270" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="18" selection-start="4891" selection-end="4891" vertical-scroll-proportion="-0.34449244" vertical-offset="2509" max-vertical-offset="3465">
           <folding />
         </state>
       </provider>
