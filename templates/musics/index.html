@@ -17,9 +17,11 @@
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 추가할 노래를 검색해 주세요. <span class="addition">(가수 이름 + 노래 제목의 형식을 추천)</span>
             </div>
-            <div class="search">
+            <div class="search input-group">
                 <label for="jaeeo_query"><i class="fa fa-search"></i></label>
                 <input id="jaeeo_query" type="search" search callback="search(query)" class="form-control query" ng-model="query"/>
+                <div class="input-group-addon" ng-click="search(query)">검색</div>
+                <div class="input-group-addon" ng-click="searchDetail(query)">상세검색</div>
             </div>
             <div class="video-wrapper clear">
                 <div class="play-controller clearfix">
@@ -70,7 +72,7 @@
             </div>
             <div class="others alert alert-success clear" ng-if="videos[video_index].other_videos.length != 0">
                 <div class="others-header">
-                    같이 들을만한 곡
+                    이어 듣기 좋은 노래
                 </div>
                 <div class="other" ng-repeat="other in videos[video_index].other_videos" ng-click="addOtherVideo(videos[video_index].other_videos, $index)">
                     {$ other.title $}
@@ -78,4 +80,20 @@
             </div>
         </div>
     </div>
+
+    <script type="text/ng-template" id="searchResult.html">
+        <div class="modal-body" ng-controller="MusicController">
+            <table class="table table-striped">
+                <tbody>
+                <tr ng-repeat="item in items track by $index">
+                    <td>{$ item.name $}</td>
+                    <td>{$ item.artist $}</td>
+                {$ item $}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+        </div>
+    </script>
 {% endblock %}

@@ -13,13 +13,7 @@ my_app.directive('search', function($window){
         link: function(scope, elem, attrs){
             elem.bind('keydown', function(e){
                 if(e.keyCode == 13){
-                    if(isNull(scope.ngModel)){
-                        $window.alert("검색어를 입력해 주세요.");
-                    }
-                    else{
-                        scope.search({query : scope.ngModel});
-                        scope.ngModel = null;
-                    }
+                    scope.search({query : scope.ngModel});
                 }
             });
         }
@@ -28,8 +22,9 @@ my_app.directive('search', function($window){
 
 
 var SEARCH_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&key=" + GOOGLE_API_KEY + "&q=";
+var DETAIL_SEARCH_URL = "api/search?query=";
 
-my_app.controller('MusicController', function($scope, $window, $http, $cookies){
+my_app.controller('MusicController', function($scope, $window, $http, $cookies, $modal, $timeout){
 
     // init videos from $cookies
     var initVideos = function(videos){
@@ -45,12 +40,17 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
     // init angular datas
     $scope.query = null;
     $scope.videos = [];
+    $scope.items = [{'name' : 'hi', 'artist' : 'hello'}];
     $scope.video_index = -1;
     initVideos($scope.videos);
 
 
     // def angular function for html attr
     $scope.search = function(query) {
+        if(isNull(query)){
+            $window.alert("검색어를 입력해 주세요.");
+            return false;
+        }
         $http.get(SEARCH_URL + query).
             success(function(data, status, headers, config) {
                 var video = {
@@ -73,6 +73,25 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
             error(function(data, status, headers, config) {
                 $window.alert('동영상 등록에 실패하였습니다.');
             });
+        $scope.query = null;
+    }
+
+    $scope.searchDetail = function(query){
+        if(isNull(query)){
+            $window.alert("검색어를 입력해 주세요.");
+            return false;
+        }
+        $http.get(DETAIL_SEARCH_URL + query).
+            success(function(data, status, headers, config) {
+                var modalInstance = $modal.open({
+                    templateUrl: 'searchResult.html',
+                    controller: 'MusicController'
+                });
+            }).
+            error(function(data, status, headers, config) {
+                $window.alert('검색에 실패하였습니다.');
+            });
+        $scope.query = null;
     }
 
     $scope.modifyVideo = function(video, query){
@@ -133,7 +152,37 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
 
     $scope.changeVideo = function(video, forced) {
         var index = $scope.videos.indexOf(video);
+        if($scope.video_index == index){
+            setPlaying();
+        }
         $scope.video_index = index;
+    }
+    $scope.changeVideoByController = function(position){
+        if(position > 0){
+            if ($scope.video_index + position < $scope.videos.length){
+                $scope.video_index += position;
+            }
+            else{
+                $scope.video_index = 0;
+            }
+        }
+        else if (position < 0){
+            if ($scope.video_index + position >= 0){
+                $scope.video_index += position;
+            }
+            else{
+                $scope.video_index = $scope.videos.length - 1;
+            }
+        }
+    }
+
+    var setPlaying = function(){
+        jQuery.each($scope.videos, function(i, val){
+            val.playing = false;
+        });
+        player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
+        $scope.videos[$scope.video_index].playing = true;
+
     }
 
     // save playlist on cookies
@@ -168,12 +217,8 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
 
         // for change Videos
         $scope.$watch('video_index', function(){
-            if($scope.videos.length > 0){
-                jQuery.each($scope.videos, function(i, val){
-                    val.playing = false;
-                });
-                player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
-                $scope.videos[$scope.video_index].playing = true;
+            if($scope.videos.length > 0 && $scope.video_index != -1){
+                setPlaying();
             }
         });
     }
@@ -196,7 +241,12 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies){
                     $scope.video_index++;
                 }
                 else{
-                    $scope.video_index = 0;
+                    if($scope.video_index == 0){
+                        setPlaying();
+                    }
+                    else{
+                        $scope.video_index = 0;
+                    }
                 }
             }
         });

@@ -10,13 +10,26 @@
     position : absolute;
     top : 6px;
     left : 10px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .search input{
     padding-left : 30px;
     position : absolute;
     border : 1px solid #333333;
+    width : 90%;
+}
+
+.search button{
+    float : right ;
+}
+
+.search .input-group-addon{
+    cursor : pointer;
+}
+
+.search .input-group-addon:hover{
+    background-color : #dddddd;
 }
 
 .video-wrapper{
