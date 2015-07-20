@@ -36,11 +36,13 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies, 
             }
         }
     }
+    var setPlaying = function(){}
 
     // init angular datas
     $scope.query = null;
+    $scope.modalInstance = null;
     $scope.videos = [];
-    $scope.items = [{'name' : 'hi', 'artist' : 'hello'}];
+    $scope.items = [];
     $scope.video_index = -1;
     initVideos($scope.videos);
 
@@ -83,9 +85,11 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies, 
         }
         $http.get(DETAIL_SEARCH_URL + query).
             success(function(data, status, headers, config) {
-                var modalInstance = $modal.open({
+                $scope.items = data;
+                $scope.modalInstance = $modal.open({
                     templateUrl: 'searchResult.html',
-                    controller: 'MusicController'
+                    controller: 'MusicModalController',
+                    scope: $scope
                 });
             }).
             error(function(data, status, headers, config) {
@@ -176,15 +180,6 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies, 
         }
     }
 
-    var setPlaying = function(){
-        jQuery.each($scope.videos, function(i, val){
-            val.playing = false;
-        });
-        player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
-        $scope.videos[$scope.video_index].playing = true;
-
-    }
-
     // save playlist on cookies
     $scope.$watch('videos', function(){
         angular.forEach($cookies, function (v, k) {
@@ -224,6 +219,13 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies, 
     }
 
     $window.onPlayerReady = function(event) {
+        setPlaying = function(){
+            jQuery.each($scope.videos, function(i, val){
+                val.playing = false;
+            });
+            player.loadVideoById($scope.videos[$scope.video_index].videoId, 0 , 'large');
+            $scope.videos[$scope.video_index].playing = true;
+        }
         $scope.$apply(function(){
             if($scope.videos.length > 0){
                 $scope.video_index = 0;
@@ -256,4 +258,12 @@ my_app.controller('MusicController', function($scope, $window, $http, $cookies, 
         player.stopVideo();
     }
 
+});
+
+
+my_app.controller('MusicModalController', function ($scope, $modalInstance) {
+    $scope.currentPage = 1;
+    $scope.close = function () {
+        $modalInstance.dismiss('close');
+    };
 });

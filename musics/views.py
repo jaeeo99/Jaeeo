@@ -15,7 +15,7 @@ def index(request):
 @api_view(['GET'])
 def search(request):
     query = request.query_params['query'].encode('utf-8')
-    url = "http://music.naver.com/search/search.nhn?query=" + query
+    url = "http://music.naver.com/search/search.nhn?target=track&query=" + query
     html = urllib2.urlopen(url).read()
     soup = BeautifulSoup( html )
     list = soup.find_all('tr', '_tracklist_move')
@@ -23,8 +23,8 @@ def search(request):
     ret = []
     for data in list:
         try:
-            name = data.find('td', 'name').find('span').getText().strip()
-            artist = data.find('td', 'artist').find('span').getText().strip()
+            name = data.find('td', 'name').find('span', 'ellipsis').getText().strip()
+            artist = data.find('td', 'artist').find('a').getText().strip()
             ret.append({'name' : name, 'artist' : artist})
         except:
             pass

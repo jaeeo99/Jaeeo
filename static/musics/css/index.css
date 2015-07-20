@@ -88,6 +88,23 @@
     text-align : right;
 }
 
+.modal-body table{
+    margin : 0;
+}
+
+.search_result{
+    cursor : pointer;
+}
+
+.search_result:hover{
+    background-color : #fcf8e3 !important;
+}
+
+.pagination{
+    margin : 0 auto;
+    float : left;
+}
+
 @media screen and (max-width: 940px){
     .play-controller{
         display : none;

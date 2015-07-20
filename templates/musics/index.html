@@ -72,7 +72,7 @@
             </div>
             <div class="others alert alert-success clear" ng-if="videos[video_index].other_videos.length != 0">
                 <div class="others-header">
-                    이어 듣기 좋은 노래
+                    같이 검색된 노래
                 </div>
                 <div class="other" ng-repeat="other in videos[video_index].other_videos" ng-click="addOtherVideo(videos[video_index].other_videos, $index)">
                     {$ other.title $}
@@ -82,18 +82,19 @@
     </div>
 
     <script type="text/ng-template" id="searchResult.html">
-        <div class="modal-body" ng-controller="MusicController">
+        <div class="modal-body">
             <table class="table table-striped">
                 <tbody>
-                <tr ng-repeat="item in items track by $index">
+                <tr class="search_result" ng-repeat="item in items track by $index" ng-if="$index < currentPage * 10 && $index >= (currentPage-1) * 10" ng-click="search(item.artist + item.name)">
                     <td>{$ item.name $}</td>
                     <td>{$ item.artist $}</td>
-                {$ item $}
                 </tr>
                 </tbody>
             </table>
         </div>
         <div class="modal-footer">
+            <pagination boundary-links="true" total-items="items.length" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+            <button type="button" class="btn btn-default btn-sm" ng-click="close()">닫기</button>
         </div>
     </script>
 {% endblock %}
