@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591268a-97ca-4558-8c91-15f52775b39c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/musics/css/index.css" afterPath="$PROJECT_DIR$/static/musics/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/musics/index.html" afterPath="$PROJECT_DIR$/templates/musics/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/musics/js/index.js" afterPath="$PROJECT_DIR$/static/musics/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/musics/img/item0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/musics/img/item1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/musics/img/item2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/musics/img/item3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/musics/img/item4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/musics/img/logo@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/musics/img/test_background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/musics/css/test.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/musics/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Jaeeo/settings.py" afterPath="$PROJECT_DIR$/Jaeeo/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musics/urls.py" afterPath="$PROJECT_DIR$/musics/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musics/views.py" afterPath="$PROJECT_DIR$/musics/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,75 +39,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musics/views.py">
+      <file leaf-file-name="test.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/musics/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="12" selection-start="829" selection-end="829" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="465">
-              <folding>
-                <marker date="1437376142000" expanded="true" signature="420:1008" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/musics/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="1" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0" vertical-offset="904" max-vertical-offset="2025">
+            <state line="117" column="24" selection-start="5432" selection-end="5432" vertical-scroll-proportion="0.9315069" vertical-offset="939" max-vertical-offset="1875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/musics/js/base.js">
+      <file leaf-file-name="test.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/musics/css/test.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="3" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jaeeo/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="420">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="169" selection-start="5215" selection-end="5215" vertical-scroll-proportion="1.4679415" vertical-offset="0" max-vertical-offset="1575">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="13" selection-start="5968" selection-end="5968" vertical-scroll-proportion="0.0" vertical-offset="2599" max-vertical-offset="4110">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musics/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="40" selection-start="766" selection-end="766" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="420">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jaeeo/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="52" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="1905">
+            <state line="136" column="17" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.0" vertical-offset="1714" max-vertical-offset="2850">
               <folding />
             </state>
           </provider>
@@ -129,20 +82,22 @@
         <option value="$PROJECT_DIR$/Jaeeo/celery.py" />
         <option value="$PROJECT_DIR$/Jaeeo/__init__.py" />
         <option value="$PROJECT_DIR$/snippets/models.py" />
-        <option value="$PROJECT_DIR$/templates/musics/base.html" />
-        <option value="$PROJECT_DIR$/static/musics/css/base.css" />
         <option value="$PROJECT_DIR$/musics/models.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/urls.py" />
         <option value="$PROJECT_DIR$/snippets/serializers.py" />
         <option value="$PROJECT_DIR$/snippets/views.py" />
-        <option value="$PROJECT_DIR$/Jaeeo/urls.py" />
         <option value="$PROJECT_DIR$/static/musics/js/base.js" />
-        <option value="$PROJECT_DIR$/Jaeeo/settings.py" />
-        <option value="$PROJECT_DIR$/musics/urls.py" />
-        <option value="$PROJECT_DIR$/musics/views.py" />
         <option value="$PROJECT_DIR$/static/musics/css/index.css" />
         <option value="$PROJECT_DIR$/static/musics/js/index.js" />
         <option value="$PROJECT_DIR$/templates/musics/index.html" />
+        <option value="$PROJECT_DIR$/Jaeeo/settings.py" />
+        <option value="$PROJECT_DIR$/Jaeeo/urls.py" />
+        <option value="$PROJECT_DIR$/musics/views.py" />
+        <option value="$PROJECT_DIR$/musics/urls.py" />
+        <option value="$PROJECT_DIR$/templates/musics/base.html" />
+        <option value="$PROJECT_DIR$/static/musics/css/base.css" />
+        <option value="$PROJECT_DIR$/static/musics/css/test.css" />
+        <option value="$PROJECT_DIR$/templates/musics/test.html" />
       </list>
     </option>
   </component>
@@ -205,6 +160,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jaeeo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jaeeo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -226,10 +199,6 @@
               <option name="myItemId" value="musics" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -246,6 +215,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="musics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,7 +254,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="snippets" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djangular" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -296,6 +273,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="musics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jaeeo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jaeeo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -325,12 +320,15 @@
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/musics/css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/musics/img" />
       <recent name="$PROJECT_DIR$/templates/musics" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/static/musics" />
       <recent name="$PROJECT_DIR$/static/musics/css" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.Jaeeo">
@@ -418,7 +416,27 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Jaeeo" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -444,27 +462,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Jaeeo" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -589,11 +587,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/musics/base.html">
+    <entry file="file://$PROJECT_DIR$/musics/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="9" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="930">
+        <state line="23" column="40" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="465">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jaeeo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="52" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/musics/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="9" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/js/base.js">
@@ -611,24 +621,18 @@
     <entry file="file://$PROJECT_DIR$/musics/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="19" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="210">
-          <folding>
-            <marker date="1437376142000" expanded="true" signature="420:1008" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="120" selection-start="2181" selection-end="2181" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="930">
-          <folding />
-        </state>
+        <state line="38" column="120" selection-start="2181" selection-end="2181" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="12" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2805">
-          <folding />
-        </state>
+        <state line="43" column="12" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2805" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Jaeeo/settings.py">
@@ -645,9 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/musics/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="51" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="780">
-          <folding />
-        </state>
+        <state line="39" column="51" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="780" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/js/base.js">
@@ -665,24 +667,18 @@
     <entry file="file://$PROJECT_DIR$/musics/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="19" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="210">
-          <folding>
-            <marker date="1437376142000" expanded="true" signature="420:1008" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="106" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="825">
-          <folding />
-        </state>
+        <state line="32" column="106" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="825" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="46" selection-start="1930" selection-end="1930" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1935">
-          <folding />
-        </state>
+        <state line="57" column="46" selection-start="1930" selection-end="1930" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/css/index.css">
@@ -694,9 +690,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/musics/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="51" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
-          <folding />
-        </state>
+        <state line="39" column="51" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/js/base.js">
@@ -714,24 +708,18 @@
     <entry file="file://$PROJECT_DIR$/musics/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="19" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="210">
-          <folding>
-            <marker date="1437376142000" expanded="true" signature="420:1008" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="106" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="825">
-          <folding />
-        </state>
+        <state line="32" column="106" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="825" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="46" selection-start="1930" selection-end="1930" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1935">
-          <folding />
-        </state>
+        <state line="57" column="46" selection-start="1930" selection-end="1930" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/css/index.css">
@@ -743,35 +731,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/musics/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="7" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
+        <state line="17" column="7" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/musics/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="32" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding>
-            <marker date="1437376142000" expanded="true" signature="420:1008" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="14" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
-          <folding />
-        </state>
+        <state line="6" column="14" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/admin/img/icon-yes.gif">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="38" selection-start="180" selection-end="180" vertical-scroll-proportion="0.09719223" vertical-offset="0" max-vertical-offset="926" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/djangular/css/bootstrap3.css">
@@ -794,26 +771,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/musics/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="21" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="1035" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musics/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="926" />
@@ -824,33 +781,9 @@
         <state line="32" column="4" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.28401726" vertical-offset="142" max-vertical-offset="4410" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/musics/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="102" selection-start="1900" selection-end="1900" vertical-scroll-proportion="-24.458334" vertical-offset="43" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/layout.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="926" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="28" selection-start="1150" selection-end="1150" vertical-scroll-proportion="-19.2" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="-6.6" vertical-offset="0" max-vertical-offset="255" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/musics/models.py">
@@ -858,26 +791,55 @@
         <state line="3" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="135" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jaeeo/urls.py">
+    <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="420">
+        <state line="178" column="13" selection-start="5968" selection-end="5968" vertical-scroll-proportion="0.0" vertical-offset="2599" max-vertical-offset="4110" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="2" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jaeeo/settings.py">
+    <entry file="file://$PROJECT_DIR$/Jaeeo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="52" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="1905">
+        <state line="21" column="0" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.08436445" vertical-offset="0" max-vertical-offset="1575" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musics/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="40" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/musics/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/musics/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="12" selection-start="829" selection-end="829" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="465">
-          <folding>
-            <marker date="1437376142000" expanded="true" signature="420:1008" placeholder="..." />
-          </folding>
+        <state line="21" column="0" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -890,28 +852,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/musics/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="1" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0" vertical-offset="904" max-vertical-offset="2025">
+        <state line="22" column="15" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2025">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musics/urls.py">
+    <entry file="file://$PROJECT_DIR$/Jaeeo/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="40" selection-start="766" selection-end="766" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="420">
+        <state line="91" column="24" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1890">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/musics/js/index.js">
+    <entry file="file://$PROJECT_DIR$/templates/musics/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="13" selection-start="5968" selection-end="5968" vertical-scroll-proportion="0.0" vertical-offset="2599" max-vertical-offset="4110">
+        <state line="36" column="6" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.5509978" vertical-offset="43" max-vertical-offset="945">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/musics/index.html">
+    <entry file="file://$PROJECT_DIR$/static/musics/img/test_background.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/musics/css/test.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="169" selection-start="5215" selection-end="5215" vertical-scroll-proportion="1.4679415" vertical-offset="0" max-vertical-offset="1575">
+        <state line="136" column="17" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.0" vertical-offset="1714" max-vertical-offset="2850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/musics/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="24" selection-start="5432" selection-end="5432" vertical-scroll-proportion="0.9315069" vertical-offset="939" max-vertical-offset="1875">
           <folding />
         </state>
       </provider>

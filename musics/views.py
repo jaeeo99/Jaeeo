@@ -29,3 +29,7 @@ def search(request):
         except:
             pass
     return Response(ret)
+
+def test(request):
+    context = {}
+    return render(request, 'musics/test.html', context)
